@@ -1,0 +1,32 @@
+package com.tukorea.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.*;
+
+import com.tukorea.domain.Member;
+
+import org.junit.jupiter.api.Test;
+
+class MemberServiceTest {
+	
+	MemberService service = new MemberService();
+
+	@Test
+	void testJoin() {
+		// 회원 정보 설정
+		Member member = new Member();
+		member.setName("Spring");
+	}
+
+	@Test
+	void testGetMemberList() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetMemberById() {
+		fail("Not yet implemented");
+	}
+
+}

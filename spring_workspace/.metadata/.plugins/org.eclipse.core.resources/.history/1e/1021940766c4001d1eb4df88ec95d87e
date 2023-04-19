@@ -1,0 +1,12 @@
+package com.tukorea.domain;
+
+public class Member {
+	
+	private int id;
+	private String name;
+	
+	public int getId() {
+		return id;
+	}
+
+}

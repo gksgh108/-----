@@ -1,0 +1,5 @@
+package com.tukorea.domain;
+
+public class Member {
+
+}

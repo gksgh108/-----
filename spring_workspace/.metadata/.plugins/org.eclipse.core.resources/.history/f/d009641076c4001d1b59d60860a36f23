@@ -1,0 +1,24 @@
+package com.tukorea.service;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MemberServiceTest {
+
+	@Test
+	void testJoin() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetMemberList() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetMemberById() {
+		fail("Not yet implemented");
+	}
+
+}

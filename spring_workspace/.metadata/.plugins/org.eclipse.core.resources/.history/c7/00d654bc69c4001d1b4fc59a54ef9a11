@@ -1,0 +1,39 @@
+package com.tukorea.repository;
+
+public class MemoryMemberRepositoryTest {
+	MemoryMemberRepository repo = new MemoryMemberRepository();
+	
+	@Test
+	public void testInsertMember() {
+		// 회원 정보 설정
+		Member member = new Member();
+		member.setName("Spring");
+		// 회원 정보 추가
+		Member result = repo.insertMember(member);
+		System.out.println("(1) result : " + result.getId() + " / " + result.getName());
+	}
+	
+	@Test
+	public void testSelectMemberById() {
+		// 회원 정보 설정
+		Member member = new Member();
+		member.setName("Spring");
+		// 회원 정보 추가
+		repo.insertMember(member);
+		// 아이디로 회원 정보 조회
+		Member result = repo.selectMemberById(member.getId());
+		// Member result = repo.selectMemberById(99); // 없을법한 임의의 숫자 넣어보기 - 에러!
+		System.out.println("(2) result : " + result.getId() + " / " + result.getName());
+
+	}
+	
+	@Test
+	public void testSelectMemberByName() {
+	
+	}
+	
+	@Test
+	public void testSelectMemberList() {
+	
+	}
+}

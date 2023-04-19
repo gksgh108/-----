@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container .title {
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.container .search-wrap {
+    padding: 15px 0;
+    text-align: right;
+}
+
+.container .search-wrap select,
+.container .search-wrap input {
+    padding: 3px 5px;
+    font-size: 13px;
+}
+
+.container .search-wrap .button {
+    text-decoration: none;
+    background: #000dab;
+    padding: 3px 8px;
+    font-size: 13px;
+    border-radius: 2px;
+    color: #FFFFFF;
+}
+
+.container .faq-list .category {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.container .faq-list .category .item {
+    display: inline-block;
+    padding: 7px 16px;
+    cursor: pointer;
+}
+
+.container .faq-list .category .item.current {
+    font-weight: bold;
+    color: #000dab;
+}
+
+.container .faq-list .list {
+    margin-bottom: 15px;
+    border-top: 1px solid #000000;
+}
+
+.container .faq-list .list .item .question {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container .faq-list .list .item .question.current {
+    color: #000dab;
+}
+
+.container .faq-list .list .item .question span {
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #000dab;
+    font-size: 14px;
+    color: #fff;
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+.container .faq-list .list .item .answer {
+    display: none;
+    white-space: pre-line;
+    padding: 40px;
+    background-color: #f6f6f6;
+    font-size: 18px;
+    color: #333;
+    line-height: 26px;
+}
+
+.container .faq-list .paging {
+    text-align: center;
+}
+
+.container .faq-list .paging a {
+    text-decoration: none;
+    border: 1px solid #000dab;
+    color: #000dab;
+    padding: 2px 7px;
+    border-radius: 50%;
+}
+
+.container .faq-list .paging a.current {
+    background: #000dab;
+    color: #FFF;
+    font-weight: bold;
+}
+.container .no-contents{
+    text-align: center;
+    padding-top: 50px;
+    color: darkgrey;
+}

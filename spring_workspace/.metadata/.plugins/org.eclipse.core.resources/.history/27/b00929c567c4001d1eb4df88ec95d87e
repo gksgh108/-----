@@ -1,0 +1,31 @@
+package com.tukorea.repository;
+
+import java.util.*;
+
+import com.tukorea.domain.Member;
+
+public class MemoryMemberRepository implements MemberRepositoryIF{
+
+	private static Map<Integer, Member> store = new HashMap<>();
+	private static int sequence = 0;
+	
+	@override
+	public Member insertMember(Memeber member) {
+		
+	}
+	
+	@override
+	public Member selectMemberById(int id) {
+		
+	}
+	
+	@override
+	public Member selectMemberByName(String name) {
+		
+	}
+	
+	@override
+	public List<Member> selectMemberList() {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package com.tukorea.service;
+
+import com.tukorea.repository.*;
+import com.tukorea.domain.*;
+
+public class MemberService {
+	
+	private final MemberRepositoryIF repo = new MemoryMemberRepository();
+	
+	public int join(Member member) {
+		
+	}
+	
+}

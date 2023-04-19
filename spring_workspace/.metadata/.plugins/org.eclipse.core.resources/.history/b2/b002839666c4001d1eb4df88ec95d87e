@@ -1,0 +1,12 @@
+package com.tukorea.repository;
+
+public interface MemberRepositoryIF {
+	//회원 등록
+	Member insertMember(Member member);
+	
+	Member selectMemberById(int id);
+	
+	Member selectMemeberByName(String name);
+	
+	List<Member> selectMemeberList();
+}

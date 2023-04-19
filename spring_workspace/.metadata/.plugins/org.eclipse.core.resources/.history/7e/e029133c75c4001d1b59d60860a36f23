@@ -1,0 +1,9 @@
+package com.tukorea.service;
+
+import com.tukorea.repository.MemberRepositoryIF;
+import com.tukorea.repository.MemoryMemberRepository;
+
+public class MemberService {
+	
+	private final MemberRepositoryIF repo = new MemoryMemberRepository();
+}

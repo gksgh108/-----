@@ -1,0 +1,6 @@
+package com.tukorea.repository;
+
+public interface MemberRepositoryIF {
+	//회원 등록
+	Member insertMember(Member member);
+}

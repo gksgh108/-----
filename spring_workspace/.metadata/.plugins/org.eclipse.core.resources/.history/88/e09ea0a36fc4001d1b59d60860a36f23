@@ -1,0 +1,34 @@
+package com.tukorea.repository;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class MemoryMemberRepositoryTest2 {
+
+	@Test
+	void testInsertMember() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSelectMemberById() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSelectMemberByName() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testSelectMemberList() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testClearStorage() {
+		fail("Not yet implemented");
+	}
+
+}

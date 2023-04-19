@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tukorea.faq.dao.FaqDao">
+
+    <!--  FAQ 카테고리 목록 조회  -->
+    <select id="selectFaqCategory" resultType="String">
+        SELECT
+            DISTINCT CATEGORY
+        FROM
+            TB_FAQ
+    </select>
+
+    <!--  FAQ 게시판 총 건수 조회  -->
+    <select id="selectFaqListTotalCount" parameterType="java.util.HashMap" resultType="Integer">
+        SELECT
+            COUNT(*)
+        FROM
+            TB_FAQ
+        WHERE
+            1=1
+
+        <if test="searchCategory != null and !searchCategory.equals('')">
+            AND CATEGORY = #{searchCategory}
+        </if>
+
+        <if test="searchKeyword != null and !searchKeyword.equals('')">
+            <choose>
+                <when test="searchType.equals('question')">
+                    AND QUESTION LIKE CONCAT('%', #{searchKeyword}, '%')
+                </when>
+                <when test="searchType.equals('answer')">
+                    AND ANSWER LIKE CONCAT('%', #{searchKeyword}, '%')
+                </when>
+            </choose>
+        </if>
+    </select>
+
+    <!--  FAQ 게시판 목록 조회  -->
+    <select id="selectFaqList" parameterType="java.util.HashMap" resultType="com.tukorea.faq.domain.Faq">
+        SELECT
+            CATEGORY,
+            QUESTION,
+            ANSWER
+        FROM
+            TB_FAQ
+        WHERE
+            1=1
+
+        <if test="searchCategory != null and !searchCategory.equals('')">
+            AND CATEGORY = #{searchCategory}
+        </if>
+
+        <if test="searchKeyword != null and !searchKeyword.equals('')">
+            <choose>
+                <when test="searchType.equals('question')">
+                    AND QUESTION LIKE CONCAT('%', #{searchKeyword}, '%')
+                </when>
+                <when test="searchType.equals('answer')">
+                    AND ANSWER LIKE CONCAT('%', #{searchKeyword}, '%')
+                </when>
+            </choose>
+        </if>
+
+        ORDER BY
+            FAQ_SEQ DESC
+        LIMIT ${startNum}, ${listNum}
+    </select>
+
+
+</mapper>

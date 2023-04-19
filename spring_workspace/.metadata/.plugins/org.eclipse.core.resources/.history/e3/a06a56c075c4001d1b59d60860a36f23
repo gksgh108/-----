@@ -1,0 +1,29 @@
+package com.tukorea.service;
+
+import com.tukorea.domain.Member;
+import com.tukorea.repository.*;
+
+public class MemberService {
+	
+	private final MemberRepositoryIF repo = new MemoryMemberRepository();
+	
+	/**
+	* 회원가입 서비스 메서드 구현
+	*/
+	public int join(Member member) {
+		// 같은 이름의 회원은 가입 불가
+		Member cMember = repo.selectMemberByName(member.getName());
+		if(cMember != null) {
+			throw new IllegalStateException("이미 존재하는 회원입니다.");
+		}
+	}
+	
+	public List<Member> getMemberList() {
+		
+	}
+	
+	public Member getMemberById(int id) {
+		
+	}
+	
+}
