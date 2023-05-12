@@ -1,0 +1,4 @@
+domain - View - Controller - service - Dao(mapper) (이 순서대로 의존성 주입)
+service - mapper - controller - view 가 될 수도 있음
+DTO는 View Layer를 위한 것으로 Domain에서 필요한 것만 필드 멤버를 추가하면 된다
+View로부터 데이터로 받아 service로 넘기거나 DB에서 데이터를 받고 다시 Service나 Controller로 넘겨주기 위한 것

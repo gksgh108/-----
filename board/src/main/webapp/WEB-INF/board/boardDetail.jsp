@@ -143,7 +143,7 @@
 
         // 비밀번호 확인 버튼 Click Event
         $('#btn_check_password').on('click', function() {
-           $.ajax({
+           $.ajax({ // 전체 페이지를 새로고침 안해도 뷰를 갱신
                url: '/board/checkPassword',
                type: 'POST',
                data: {

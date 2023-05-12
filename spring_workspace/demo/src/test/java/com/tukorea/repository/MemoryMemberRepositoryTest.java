@@ -2,6 +2,7 @@ package com.tukorea.repository;
 
 import java.util.*;
 
+import com.tukorea.service.MemberService;
 import org.junit.jupiter.api.*; //junit을 통해 생성하면 자동으로 생성
 
 import com.tukorea.domain.*;
@@ -75,5 +76,6 @@ public class MemoryMemberRepositoryTest {
 	public void afterEach() {
 	repo.clearStorage();
 	}
+
 
 }

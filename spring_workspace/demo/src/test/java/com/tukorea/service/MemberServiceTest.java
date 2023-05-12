@@ -52,7 +52,10 @@ class MemberServiceTest {
 		// 회원 정보 추가
 		service.join(member1);
 		service.join(member2);
+
 	}
+
+
 
 	@Test
 	void testGetMemberById() {

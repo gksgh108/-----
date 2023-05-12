@@ -77,8 +77,9 @@
         <table class="form-table">
             <tr>
                 <th>제목<em class="red">*</em></th>
+                <td>
                     <input type="text" class="input-normal" name="title" maxlength="100"
-                           value ="${board.title} placeholder="제목을 입력해주세요.">
+                           value ="${board.title}" placeholder="제목을 입력해주세요.">
                 </td>
             </tr>
             <tr>

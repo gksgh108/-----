@@ -22,7 +22,7 @@ import java.util.Map;
         }
 
         /**
-         * 게시판 추가
+         * 게시판 등록 Service Method
          */
         public void addBoard(BoardForm boardForm) {
         try {
