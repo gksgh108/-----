@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tukorea.mypage.dao.MypageDao">
+
+    <select id="selectMemberInfo" parameterType="Integer" resultType="java.util.HashMap">
+        SELECT
+            M_SEQ,
+            M_ID,
+            PROFILE_IMG_SAVE_PATH
+        FROM
+            TB_MEMBER
+        WHERE
+            M_SEQ = #{memberSeq}
+    </select>
+
+    <update id="updateProfileImage" parameterType="java.util.HashMap">
+        UPDATE TB_MEMBER
+        SET
+            PROFILE_IMG_NAME = #{imageName},
+            PROFILE_IMG_SAVE_PATH = #{savePath}
+        WHERE
+            M_SEQ = #{memberSeq}
+    </update>
+</mapper>
